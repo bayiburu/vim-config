@@ -1,11 +1,17 @@
 all:
-	@if [ ! -d "./bundle" ]; then \
-		mkdir ./bundle; \
+	@if [ ! -d "bundle" ]; then \
+		mkdir bundle; \
 	fi; \
-	if [ ! -d "./bundle/Vundle.vim" ]; then \
+	if [ ! -d "bundle/Vundle.vim" ]; then \
 		git clone "https://github.com/VundleVim/Vundle.vim.git" ./bundle/Vundle.vim; \
 	fi; \
-	vim +PluginInstall +qall
+	vim +PluginInstall +qall; \
+	if [ -d "bundle/YouCompleteMe" ]; then \
+		cd "bundle/YouCompleteMe"; \
+		git submodule update --init --recursive; \
+		./install.py --clang-completer; \
+		cd "../../"; \
+	fi
 
 clean:
 	rm -rf ./bundle
