@@ -19,7 +19,7 @@ syntax on
 filetype off
 
 set background=dark
-colorscheme solarized
+colorscheme desert
 
 set nobackup		" do not keep a backup file, use versions instead
 set history=50		" keep 50 lines of command line history
@@ -80,6 +80,7 @@ call vundle#begin()
 	Plugin 'https://github.com/Valloric/YouCompleteMe.git'
 	Plugin 'https://github.com/rking/ag.vim.git'
 	Plugin 'https://github.com/mattn/emmet-vim.git'
+	Plugin 'https://github.com/terryma/vim-multiple-cursors.git'
 call vundle#end()
 
 filetype plugin indent on
