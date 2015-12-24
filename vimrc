@@ -8,6 +8,24 @@ if v:progname =~? "evim"
   finish
 endif
 
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+	Plugin 'VundleVim/Vundle.vim'
+	Plugin 'https://github.com/vim-plugins/nerdtree.git'
+	Plugin 'https://github.com/vim-plugins/taglist.git'
+	Plugin 'https://github.com/vim-plugins/ctags.git'
+	Plugin 'https://github.com/vim-plugins/echofunc.git'
+	Plugin 'https://github.com/vim-plugins/vimrepress.git'
+	Plugin 'https://github.com/godlygeek/tabular.git'
+	Plugin 'https://github.com/plasticboy/vim-markdown.git'
+	Plugin 'https://github.com/kien/ctrlp.vim.git'
+	Plugin 'https://github.com/Valloric/YouCompleteMe.git'
+	Plugin 'https://github.com/rking/ag.vim.git'
+	Plugin 'https://github.com/mattn/emmet-vim.git'
+	Plugin 'https://github.com/terryma/vim-multiple-cursors.git'
+	Plugin 'https://github.com/msanders/snipmate.vim.git'
+call vundle#end()
+
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
@@ -65,23 +83,6 @@ if &t_Co > 2 || has("gui_running")
   syntax on
   set hlsearch
 endif
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-	Plugin 'VundleVim/Vundle.vim'
-	Plugin 'https://github.com/vim-plugins/nerdtree.git'
-	Plugin 'https://github.com/vim-plugins/taglist.git'
-	Plugin 'https://github.com/vim-plugins/ctags.git'
-	Plugin 'https://github.com/vim-plugins/echofunc.git'
-	Plugin 'https://github.com/vim-plugins/vimrepress.git'
-	Plugin 'https://github.com/godlygeek/tabular.git'
-	Plugin 'https://github.com/plasticboy/vim-markdown.git'
-	Plugin 'https://github.com/kien/ctrlp.vim.git'
-	Plugin 'https://github.com/Valloric/YouCompleteMe.git'
-	Plugin 'https://github.com/rking/ag.vim.git'
-	Plugin 'https://github.com/mattn/emmet-vim.git'
-	Plugin 'https://github.com/terryma/vim-multiple-cursors.git'
-call vundle#end()
 
 filetype plugin indent on
 

@@ -1,4 +1,6 @@
-all:
+all: plugin
+
+init:
 	@if [ ! -d "bundle" ]; then \
 		mkdir bundle; \
 	fi; \
@@ -12,6 +14,9 @@ all:
 		./install.py --clang-completer; \
 		cd "../../"; \
 	fi
+
+plugin:
+	@vim +PluginInstall +qall;
 
 clean:
 	rm -rf ./bundle
