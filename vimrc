@@ -24,6 +24,7 @@ call vundle#begin()
 	Plugin 'https://github.com/mattn/emmet-vim.git'
 	Plugin 'https://github.com/terryma/vim-multiple-cursors.git'
 	Plugin 'https://github.com/msanders/snipmate.vim.git'
+	Plugin 'https://github.com/bling/vim-airline.git'
 call vundle#end()
 
 " Use Vim settings, rather than Vi settings (much better!).
