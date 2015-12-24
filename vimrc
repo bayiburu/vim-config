@@ -23,8 +23,10 @@ call vundle#begin()
 	Plugin 'https://github.com/rking/ag.vim.git'
 	Plugin 'https://github.com/mattn/emmet-vim.git'
 	Plugin 'https://github.com/terryma/vim-multiple-cursors.git'
-	Plugin 'https://github.com/msanders/snipmate.vim.git'
+	"Plugin 'https://github.com/msanders/snipmate.vim.git'
 	Plugin 'https://github.com/bling/vim-airline.git'
+	Plugin 'Shougo/neosnippet'
+	Plugin 'Shougo/neosnippet-snippets'
 call vundle#end()
 
 " Use Vim settings, rather than Vi settings (much better!).
@@ -95,3 +97,10 @@ let g:vim_markdown_frontmatter=1
 " ctrlp
 "
 let g:ctrlp_map = '<c-p>'
+
+" Plugin key-mappings.
+"
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+let g:neosnippet#enable_snipmate_compatibility = 1
