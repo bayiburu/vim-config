@@ -6,6 +6,7 @@
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
   finish
+	background: blue;
 endif
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -55,11 +56,11 @@ set tabstop=4
 set shiftwidth=4
 set showmatch
 set incsearch
+set list lcs=tab:\¦\ 
 
 let Tlist_Show_One_Flie = 1
 let Tlist_Exit_OnlyWindow = 1
 let Tlist_Use_Right_Window = 1
-let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_WinWidth=40
 
 map <F1> :NERDTreeToggle<CR>
@@ -104,3 +105,4 @@ imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
 let g:neosnippet#enable_snipmate_compatibility = 1
+

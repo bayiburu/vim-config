@@ -1,15 +1,14 @@
 
 snippet rcc
-    var React = require('react')
+	import React from 'react';
 
-    var ${1} = React.createClass({
-        
-        render: function() {
+	export default class ${1} extends React.Component {
+	
+        render() {
             return (
-            <div />
+                <div>
+                </div>
             );
         }
 
-    });
-
-    module.exports = $1
+    } 
