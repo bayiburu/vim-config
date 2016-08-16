@@ -1,6 +1,6 @@
 all: plugin
 
-init:
+install:
 	@if [ ! -d "bundle" ]; then \
 		mkdir bundle; \
 	fi; \
