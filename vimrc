@@ -20,7 +20,7 @@ call vundle#begin()
 	Plugin 'https://github.com/godlygeek/tabular.git'
 	Plugin 'https://github.com/plasticboy/vim-markdown.git'
 	Plugin 'https://github.com/kien/ctrlp.vim.git'
-	Plugin 'https://github.com/Valloric/YouCompleteMe.git'
+	"Plugin 'https://github.com/Valloric/YouCompleteMe.git'
 	Plugin 'https://github.com/rking/ag.vim.git'
 	Plugin 'https://github.com/mattn/emmet-vim.git'
 	Plugin 'https://github.com/terryma/vim-multiple-cursors.git'
