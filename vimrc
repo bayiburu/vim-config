@@ -16,11 +16,12 @@ call vundle#begin()
 	Plugin 'https://github.com/vim-plugins/taglist.git'
 	Plugin 'https://github.com/vim-plugins/ctags.git'
 	Plugin 'https://github.com/vim-plugins/echofunc.git'
-	Plugin 'https://github.com/vim-plugins/vimrepress.git'
+	"Plugin 'https://github.com/vim-plugins/vimrepress.git'
+	Plugin 'https://github.com/vim-scripts/VimRepress.git'
 	Plugin 'https://github.com/godlygeek/tabular.git'
 	Plugin 'https://github.com/plasticboy/vim-markdown.git'
 	Plugin 'https://github.com/kien/ctrlp.vim.git'
-	"Plugin 'https://github.com/Valloric/YouCompleteMe.git'
+	Plugin 'https://github.com/Valloric/YouCompleteMe.git'
 	Plugin 'https://github.com/rking/ag.vim.git'
 	Plugin 'https://github.com/mattn/emmet-vim.git'
 	Plugin 'https://github.com/terryma/vim-multiple-cursors.git'
@@ -28,6 +29,7 @@ call vundle#begin()
 	Plugin 'https://github.com/bling/vim-airline.git'
 	Plugin 'Shougo/neosnippet'
 	Plugin 'Shougo/neosnippet-snippets'
+	Plugin 'mileszs/ack.vim'
 call vundle#end()
 
 " Use Vim settings, rather than Vi settings (much better!).
@@ -56,6 +58,7 @@ set tabstop=4
 set shiftwidth=4
 set showmatch
 set incsearch
+set paste
 set list lcs=tab:\¦\ 
 
 let Tlist_Show_One_Flie = 1
@@ -106,3 +109,4 @@ smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
 let g:neosnippet#enable_snipmate_compatibility = 1
 
+let g:ackprg = 'ag --nogroup --nocolor --column'
