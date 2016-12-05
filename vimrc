@@ -16,8 +16,6 @@ call vundle#begin()
 	Plugin 'https://github.com/vim-plugins/taglist.git'
 	Plugin 'https://github.com/vim-plugins/ctags.git'
 	Plugin 'https://github.com/vim-plugins/echofunc.git'
-	"Plugin 'https://github.com/vim-plugins/vimrepress.git'
-	Plugin 'https://github.com/vim-scripts/VimRepress.git'
 	Plugin 'https://github.com/godlygeek/tabular.git'
 	Plugin 'https://github.com/plasticboy/vim-markdown.git'
 	Plugin 'https://github.com/kien/ctrlp.vim.git'
@@ -25,11 +23,12 @@ call vundle#begin()
 	Plugin 'https://github.com/rking/ag.vim.git'
 	Plugin 'https://github.com/mattn/emmet-vim.git'
 	Plugin 'https://github.com/terryma/vim-multiple-cursors.git'
-	"Plugin 'https://github.com/msanders/snipmate.vim.git'
 	Plugin 'https://github.com/bling/vim-airline.git'
 	Plugin 'Shougo/neosnippet'
 	Plugin 'Shougo/neosnippet-snippets'
 	Plugin 'mileszs/ack.vim'
+	Plugin 'joywek/VimRepressEx'
+	Plugin 'isnowfy/python-vim-instant-markdown'
 call vundle#end()
 
 " Use Vim settings, rather than Vi settings (much better!).
@@ -54,6 +53,7 @@ set title
 set nu
 set autoindent
 set smartindent
+set cindent
 set tabstop=4
 set shiftwidth=4
 set showmatch
