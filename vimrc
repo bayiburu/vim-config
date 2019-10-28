@@ -12,14 +12,13 @@ endif
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 	Plugin 'VundleVim/Vundle.vim'
-	Plugin 'https://github.com/vim-plugins/nerdtree.git'
-	Plugin 'https://github.com/vim-plugins/taglist.git'
 	Plugin 'https://github.com/vim-plugins/ctags.git'
+	Plugin 'https://github.com/vim-plugins/taglist.git'
+	Plugin 'https://github.com/vim-plugins/nerdtree.git'
 	Plugin 'https://github.com/vim-plugins/echofunc.git'
 	Plugin 'https://github.com/godlygeek/tabular.git'
 	Plugin 'https://github.com/plasticboy/vim-markdown.git'
 	Plugin 'https://github.com/kien/ctrlp.vim.git'
-	Plugin 'https://github.com/Valloric/YouCompleteMe.git'
 	Plugin 'https://github.com/rking/ag.vim.git'
 	Plugin 'https://github.com/mattn/emmet-vim.git'
 	Plugin 'https://github.com/terryma/vim-multiple-cursors.git'
@@ -38,11 +37,15 @@ set nocompatible
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
+" Tells Vim to look for a tags file in the directory of the current file, 
+" in the current directory and up and up until your $HOME.
+set tags=./tags,tags;$HOME
+
 syntax on
 filetype off
 
 set background=dark
-colorscheme molokai
+colorscheme desert
 
 set nobackup		" do not keep a backup file, use versions instead
 set history=50		" keep 50 lines of command line history
@@ -63,7 +66,7 @@ set list lcs=tab:\¦\
 let Tlist_Show_One_Flie = 1
 let Tlist_Exit_OnlyWindow = 1
 let Tlist_Use_Right_Window = 1
-let Tlist_WinWidth=40
+let Tlist_WinWidth=60
 
 map <F1> :NERDTreeToggle<CR>
 map <F2> :Tlist<CR>
