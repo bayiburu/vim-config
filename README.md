@@ -11,8 +11,13 @@ The ultimate Vim configuration.
 
 ## Installation
 
+This script should be run via curl:
 ```sh
-cd ~ & git clone https://github.com/joywek/VimSettings.git .vim & cd .ssh & make install
+sh -c "$(curl -fsSL https://github.com/joywek/VimSettings/blob/master/install.sh)"
+```
+or wget:
+```sh
+sh -c "$(wget -qO- https://github.com/joywek/VimSettings/blob/master/install.sh)"
 ```
 
 If you occur this error:

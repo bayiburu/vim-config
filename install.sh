@@ -1,9 +1,4 @@
 #!/bin/sh
-#
-# This scrpt should be run via curl:
-#	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-# or wget:
-#   sh -c "$(wget -qO- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 set -e
 
