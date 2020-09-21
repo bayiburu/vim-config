@@ -23,6 +23,7 @@ call vundle#begin()
 	Plugin 'https://github.com/mattn/emmet-vim.git'
 	Plugin 'https://github.com/terryma/vim-multiple-cursors.git'
 	Plugin 'https://github.com/bling/vim-airline.git'
+	Plugin 'ayu-theme/ayu-vim'
 	Plugin 'Shougo/neosnippet'
 	Plugin 'Shougo/neosnippet-snippets'
 	Plugin 'mileszs/ack.vim'
@@ -44,8 +45,11 @@ set tags=./tags,tags;$HOME
 syntax on
 filetype off
 
-set background=dark
-colorscheme desert
+" set background=dark
+" colorscheme desert
+set termguicolors
+let ayucolor="mirage"
+colorscheme ayu
 
 set nobackup		" do not keep a backup file, use versions instead
 set history=50		" keep 50 lines of command line history
