@@ -1,7 +1,6 @@
-
 "
-" Maintainer:	Bram Moolenaar <Bram@vim.org>
-" Last change:	2008 Dec 17
+" Maintainer:	Dylan <dylan@haitu.io>
+" Last change:	2024/20/28
 "
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
@@ -9,27 +8,10 @@ if v:progname =~? "evim"
 	background: blue;
 endif
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-	Plugin 'VundleVim/Vundle.vim'
-	Plugin 'https://github.com/vim-plugins/ctags.git'
-	Plugin 'https://github.com/vim-plugins/taglist.git'
-	Plugin 'https://github.com/vim-plugins/nerdtree.git'
-	Plugin 'https://github.com/vim-plugins/echofunc.git'
-	Plugin 'https://github.com/godlygeek/tabular.git'
-	Plugin 'https://github.com/plasticboy/vim-markdown.git'
-	Plugin 'https://github.com/kien/ctrlp.vim.git'
-	Plugin 'https://github.com/rking/ag.vim.git'
-	Plugin 'https://github.com/mattn/emmet-vim.git'
-	Plugin 'https://github.com/terryma/vim-multiple-cursors.git'
-	Plugin 'https://github.com/bling/vim-airline.git'
-	Plugin 'ayu-theme/ayu-vim'
-	Plugin 'Shougo/neosnippet'
-	Plugin 'Shougo/neosnippet-snippets'
-	Plugin 'mileszs/ack.vim'
-	Plugin 'joywek/VimRepressEx'
-	Plugin 'isnowfy/python-vim-instant-markdown'
-call vundle#end()
+call plug#begin()
+  Plug 'tpope/vim-sensible'
+  Plug 'ayu-theme/ayu-vim'
+call plug#end()
 
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.

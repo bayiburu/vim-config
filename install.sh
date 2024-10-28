@@ -1,12 +1,13 @@
 #!/bin/sh
 
+# Enable instant exit mode.
 set -e
 
 # Default settings
 
-REPO=https://github.com/joywek/VimSettings.git
-CONFIG_DIR=~/.vim
-VUNDLE_DIR=${CONFIG_DIR}/bundle/Vundle.vim
+REPO=https://github.com/bayiburu/vim-settings.git
+VIM_DIR=~/.vim
+VUNDLE_DIR=${VIM_DIR}/bundle/Vundle.vim
 
 command_exists() {
 	command -v "$@" >/dev/null 2>&1
@@ -39,61 +40,44 @@ setup_config() {
 
 	echo "${BLUE}Cloning vim-config...${RESET}"
 	
+	command_exists curl || {
+		error "`curl` is not installed."
+		exit 1
+	}
+
 	command_exists git || {
-		error "git is not installed."
+		error "`git` is not installed."
 		exit 1
 	}
 
 	if [ ! -d ~/.vim ]; then
-		git clone https://github.com/joywek/VimSettings.git ${CONFIG_DIR} || {
+		git clone ${REPO} ${VIM_DIR} || {
 			error "git clone of vim-config failed."
 			exit 1
 		}
 	else
-		cd ${CONFIG_DIR}
+		cd ${VIM_DIR}
 		git pull
 	fi
 
-	echo "${BLUE}Creating linked file of vimrc...${RESET}"
+	echo "${BLUE}Creating linked file of vimrc ...${RESET}"
 	rm -f ~/.vimrc
-	ln -s ${CONFIG_DIR}/vimrc ~/.vimrc
+	ln -s ${VIM_DIR}/vimrc ~/.vimrc
 }
 
-setup_plugins() {
+install_plugins() {
 
-		echo "${BLUE}Cloning Vundle...${RESET}"
+	echo "${BLUE}Downloading `vim-plug` ...${RESET}"
+	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-		cd ${CONFIG_DIR}
-		if [ ! -d "bundle" ]; then
-			mkdir bundle
-		fi
-
-		if [ ! -d ${VUNDLE_DIR} ]; then
-			git clone https://github.com/VundleVim/Vundle.vim.git ${VUNDLE_DIR}
-		else
-			cd bundle
-			git pull
-			cd ${CONFIG_DIR}
-		fi
-
-		echo "${BLUE}Installing plugins...${RESET}"
-
-		vim +PluginInstall +qall
-
-		if [ -d "bundle/YouCompleteMe" ]; then
-			cd "bundle/YouCompleteMe"
-			git submodule update --init --recursive
-			./install.py --clang-completer
-		fi
-
+	echo "${BLUE}Installing plugins...${RESET}"
+	vim +PluginInstall +qall
 }
 
 main() {
-
 	setup_color
 	setup_config
-	setup_plugins
-
+	install_plugins
 }
 
 main "$@"
