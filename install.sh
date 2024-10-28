@@ -5,9 +5,8 @@ set -e
 
 # Default settings
 
-REPO=https://github.com/bayiburu/vim-settings.git
+REPO=https://github.com/bayiburu/vim-config.git
 VIM_DIR=~/.vim
-VUNDLE_DIR=${VIM_DIR}/bundle/Vundle.vim
 
 command_exists() {
 	command -v "$@" >/dev/null 2>&1
@@ -41,16 +40,16 @@ setup_config() {
 	echo "${BLUE}Cloning vim-config...${RESET}"
 	
 	command_exists curl || {
-		error "`curl` is not installed."
+		error "curl is not installed."
 		exit 1
 	}
 
 	command_exists git || {
-		error "`git` is not installed."
+		error "git is not installed."
 		exit 1
 	}
 
-	if [ ! -d ~/.vim ]; then
+	if [ ! -d ${VIM_DIR} ]; then
 		git clone ${REPO} ${VIM_DIR} || {
 			error "git clone of vim-config failed."
 			exit 1
@@ -68,7 +67,7 @@ setup_config() {
 install_plugins() {
 
 	echo "${BLUE}Downloading `vim-plug` ...${RESET}"
-	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	curl -fLo ${VIM_DIR}/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 	echo "${BLUE}Installing plugins...${RESET}"
 	vim +PluginInstall +qall
