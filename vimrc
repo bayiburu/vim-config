@@ -9,8 +9,11 @@ if v:progname =~? "evim"
 endif
 
 call plug#begin()
-  Plug 'tpope/vim-sensible'
   Plug 'ayu-theme/ayu-vim'
+  Plug 'https://github.com/vim-plugins/ctags.git'
+  Plug 'https://github.com/vim-plugins/taglist.git'
+  Plug 'https://github.com/vim-plugins/nerdtree.git'
+  Plug 'https://github.com/bling/vim-airline.git'
 call plug#end()
 
 " Use Vim settings, rather than Vi settings (much better!).

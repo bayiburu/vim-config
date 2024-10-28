@@ -3,8 +3,6 @@
 # Enable instant exit mode.
 set -e
 
-# Default settings
-
 REPO=https://github.com/bayiburu/vim-config.git
 VIM_DIR=~/.vim
 
@@ -65,12 +63,11 @@ setup_config() {
 }
 
 install_plugins() {
-
-	echo "${BLUE}Downloading `vim-plug` ...${RESET}"
+	echo "${BLUE}Downloading vim-plug ...${RESET}"
 	curl -fLo ${VIM_DIR}/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 	echo "${BLUE}Installing plugins...${RESET}"
-	vim +PluginInstall +qall
+	vim +PlugInstall +qall
 }
 
 main() {

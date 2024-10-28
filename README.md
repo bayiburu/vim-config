@@ -1,4 +1,4 @@
-# VimSettings
+# vim-config
 The ultimate Vim configuration.
 
 ## Requires
@@ -12,12 +12,13 @@ The ultimate Vim configuration.
 ## Installation
 
 This script should be run via curl:
+
 ```sh
-sh -c "$(curl -fsSL https://github.com/bayiburu/vim-config/blob/master/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/bayiburu/vim-config/refs/heads/master/install.sh)"
 ```
 or wget:
 ```sh
-sh -c "$(wget -qO- https://github.com/bayiburu/vim-config/blob/master/install.sh)"
+sh -c "$(wget -qO- https://raw.githubusercontent.com/bayiburu/vim-config/refs/heads/master/install.sh)"
 ```
 
 If you occur this error:
