@@ -31,3 +31,12 @@ then run the command:
 ```sh
 xcode-select --install
 ```
+
+The following error will be encountered during the installation process:
+
+```plain
+Error detected while processing /Users/dylan/.vimrc:
+line 37:
+E185: Cannot find color scheme 'ayu'.
+```
+This is because the 'ayu' theme has not been installed at this time. Temporarily ignore this error and press any key to continue. The 'ayu' theme will be installed during the subsequent plugin installation process.
