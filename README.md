@@ -14,11 +14,11 @@ The ultimate Vim configuration.
 This script should be run via curl:
 
 ```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/bayiburu/vim-config/refs/heads/master/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/haitux/vim-config/refs/heads/master/install.sh)"
 ```
 or wget:
 ```sh
-sh -c "$(wget -qO- https://raw.githubusercontent.com/bayiburu/vim-config/refs/heads/master/install.sh)"
+sh -c "$(wget -qO- https://raw.githubusercontent.com/haitux/vim-config/refs/heads/master/install.sh)"
 ```
 
 If you occur this error:
